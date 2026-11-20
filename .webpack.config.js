@@ -28,7 +28,7 @@ const config = {
                 if (entry_name in entries) {
                     throw new Error(`Duplicate bundle entry: '${entry_name}'.`);
                 }
-                entries[entry_name] = file;
+                entries[entry_name] = path.resolve(__dirname, file);
             }
         }
 
